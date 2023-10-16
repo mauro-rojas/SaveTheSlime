@@ -1,0 +1,49 @@
+import "../styleSheets/Slime.css"
+import slimeHighHp from "../sources/Slime/slimeFullhp.gif"
+import slimeIdle from "../sources/Slime/slimeIdle.gif"
+import slimeDmg from "../sources/Slime/slimeDmg.gif"
+import slimeDeath from "../sources/Slime/slimeDeath.gif"
+import slimeWin from "../sources/Slime/slimeWin.gif"
+import { motion } from "framer-motion"
+
+export default function Slime({ hpValue , win}){
+
+
+    
+
+    return(
+        <motion.div
+            className="slime-container"
+            initial={{x:-700}}
+            animate={{x:0}}
+            transition={{
+                type: "spring",
+                bounce: 0.1,
+                duration: 0.9,
+                delay:2.8
+            }}
+        >
+            <img
+                className="slime"
+                src={
+                    (win) ?
+                        slimeWin
+                    :
+                        (hpValue>=75) ?
+                            slimeHighHp
+                        :
+                            (hpValue>30) ?
+                                slimeIdle
+                            :
+                                (hpValue!== 0) ?
+                                    slimeDmg
+                                :
+                                    slimeDeath
+                        
+                       
+                }
+                alt="slime"
+            />
+        </motion.div>
+    )
+}
