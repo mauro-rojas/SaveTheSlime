@@ -1,5 +1,5 @@
-.start-container,
-.rules-container{
+.startContainer,
+.rulesContainer{
     z-index: 2;
     position: sticky;
     padding-left: 40px;
@@ -9,7 +9,7 @@
     justify-content: flex-start;
 }
 
-.playAgain-container{  
+.playAgainContainer{  
     z-index: 21;  
     position: absolute;
     height: 100vh;
@@ -38,27 +38,27 @@
     
 }
 
-.start-sign-container,
-.rules-sign-container,
-.playAgain-sign-container{    
+.startSigncontainer,
+.rulesSignContainer,
+.playAgainSignContainer{    
     min-width: 138px;
     
 }
 
-.start-sign,
-.rules-sign{
+.startSign,
+.rulesSign{
     height: 6vh;
     width: 14vw;
     cursor: url("../sources/cursor2.png"),auto;
 }
-.playAgain-sign{
+.playAgainSign{
     height: 20vh;
     cursor: url("../sources/cursor2.png"),auto;
 }
  
 
 @media (max-width: 800px) {
-    .playAgain-container{
+    .playAgainContainer{
         height: 80vh;
         padding: 0;
         flex-direction: column;
@@ -66,16 +66,16 @@
         justify-content: center;
     }
 
-    .playAgain-sign{
+    .playAgainSign{
         height: 17vh;
     }
 
-    .start-container, .rules-container{
+    .startContainer, .rulesContainer{
         padding-left: 0;
         padding-top: 10vh;
         
     }
-    .start-sign, .rules-sign{
+    .startSign, .rulesSign{
 
         width: 20vw;
     }

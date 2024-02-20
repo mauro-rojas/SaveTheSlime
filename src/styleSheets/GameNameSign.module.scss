@@ -1,4 +1,4 @@
-.nameSign-container{
+.nameSignContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@
     
 }
 
-.gameName-container{
+.gameNameContainer{
     position: fixed;
     z-index: 3;
     height: 35vh;
@@ -73,7 +73,7 @@
         min-width: 185px;
     }
 
-    .gameName-container{
+    .gameNameContainer{
         height: 28vh;
     }
 

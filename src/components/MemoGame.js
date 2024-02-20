@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { easeInOut, motion } from "framer-motion";
-import "../styleSheets/MemoGame.css"
+import styles from "../styleSheets/MemoGame.module.scss"
 import hachuela from "../sources/gameTokens/hachuela.png"
 import licuadora from "../sources/gameTokens/licuadora.png"
 import huevos from "../sources/gameTokens/huevos.png"
@@ -113,7 +113,7 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
     
     return(
         <motion.ul 
-            className="fichas-container"
+            className={styles.fichasContainer}
             initial="hidden"
             animate="visible"
             variants={fichasAnimaciones}
@@ -132,7 +132,7 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
                     return(
                         <motion.li
                             key={ficha}
-                            className="ficha"
+                            className={styles.ficha}
                             whileTap={{scale:0.9}}
                             whileHover={{scale:1.1}}
                             animate={`${mixed ? "mixed" : "visible" }`}
@@ -147,7 +147,7 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
                                 (selected.includes(ficha)|| guessed.includes(ficha)) ?
                                 (<div>
                                     <motion.img                                
-                                        className="ficha-imagen" 
+                                        className={styles.fichaImagen}
                                         src={url}
                                         alt="game-token"
                                         initial={{ opacity:0.4, scale:0.5}}
@@ -161,7 +161,7 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
                                     transition={{duration:0.6}}
                                 >
                                     <img                                
-                                        className="ficha-reverso" 
+                                        className={styles.fichaReverso}
                                         src={reverso}
                                         alt="game-hidden-token"                                   
                                     />

@@ -1,5 +1,5 @@
 
-import "../styleSheets/HpBar.css"
+import styles from "../styleSheets/HpBar.module.scss"
 import { motion } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
 
@@ -25,7 +25,7 @@ export default function HpBar({ hpValue }){
 
     return(
         <motion.div 
-            className="hpBar-container"
+            className={styles.hpBarContainer}
             initial={{y:-1500}}
             animate={{y:0}}
             transition={{
@@ -38,7 +38,7 @@ export default function HpBar({ hpValue }){
         >
            
             <motion.img
-                className="hpBar initial"
+                className={`${styles.hpBar} ${styles.initial}`}
                 src={hpBar}
                 alt="hp-bar"
                 initial={{scale:0.5}}
@@ -48,7 +48,7 @@ export default function HpBar({ hpValue }){
             
 
             <motion.div
-                className="health-container"
+                className={styles.healthContainer}
                 initial={{scale:0.5 }}
                 animate={{scale:1}}
                 transition={{delay:2.5,duration:1}}
@@ -56,19 +56,19 @@ export default function HpBar({ hpValue }){
                 <div
                     className={
                         (hpValue>60) ?
-                            "fullHp"
+                            `${styles.fullHp}`
                         :
                             (hpValue>30) ?
-                                "halfHp"
+                                `${styles.halfHp}`
                             :
-                                "lowHp"
+                                `${styles.lowHp}`
                     }
                     ref={healthBar}
                 >
                 </div>
 
                 <div
-                    className="health-shadow"
+                    className={styles.healthShadow}
                     ref={healthBarShadow}
                 ></div>
 

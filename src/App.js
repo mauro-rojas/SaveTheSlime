@@ -1,5 +1,5 @@
 
-import "./styleSheets/App.css";
+import "./styleSheets/App.module.scss";
 
 import Background from "./components/Background"
 import GameNameSign from "./components/GameNameSign";

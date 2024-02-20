@@ -1,4 +1,4 @@
-.fichas-container{
+.fichasContainer{
     position: relative;
     z-index: 10;
     display: grid;
@@ -27,13 +27,13 @@
     border-radius: 8px;
 }
 
-.ficha-imagen{
+.fichaImagen{
     height: 8vh;
     cursor: url("../sources/cursor2.png"), auto;
 
 }
 
-.ficha-reverso{
+.fichaReverso{
     height: 11vh;
     width: 8vw;
     max-width: 110px;
@@ -45,7 +45,7 @@
 
 @media (max-width: 800px) {
 
-    .fichas-container{
+    .fichasContainer{
         padding: 0;
         padding-top: 5vh;
         float: none;
@@ -57,17 +57,17 @@
         gap: 2.5vw;
     }
 
-    .ficha, .ficha-reverso{
+    .ficha, .fichaReverso{
         height: 8.5vh;
         width: 16vw;  
         max-width: 81px;   
     }
 
-    .ficha-reverso{
+    .fichaReverso{
         padding: 1vw 2vw 1vw 2vw;
     }
 
-    .ficha-imagen{
+    .fichaImagen{
         height: 5vh;
     }
     
@@ -75,7 +75,7 @@
 
 @media (width > 1280px) {
 
-    .ficha, .ficha-reverso{
+    .ficha, .fichaReverso{
         width: 6vw;  
               
     }

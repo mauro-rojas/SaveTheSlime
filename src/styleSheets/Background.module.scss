@@ -1,4 +1,4 @@
-.background-container img{
+.backgroundContainer img{
     height: 100vh;
     width: 100vw;
     z-index: 1;
@@ -7,7 +7,7 @@
 
 @media (max-width: 800px) {
 
-    .background-container img{
+    .backgroundContainer img{
         transform: 
             translateX(-15vw)
             translateY(-10vh) 

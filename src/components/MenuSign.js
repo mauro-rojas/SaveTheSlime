@@ -1,4 +1,4 @@
-import "../styleSheets/MenuSign.css"
+import styles from "../styleSheets/MenuSign.module.scss"
 import {   motion } from "framer-motion"
 import { useState } from "react";
 import slimeDecoration from "../sources/gif-slime-decoration.gif"
@@ -17,12 +17,12 @@ export default function MenuSign({image, delay, name, handleClick,handleonMouseO
 
     return(
         <div 
-            className={`${name}-container`}
+            className={styles[`${name}Container`]}
             
         >
         
             <motion.img // cuando paso el mouse por encima de los botones aparece slime al lado
-                className="decorationOfSelected"
+                className={styles.decorationOfSelected}
                 src={slimeDecoration}
                 alt="slime-decoration"
                 animate={isSelected ? "selected" : "noSelected" }                
@@ -31,13 +31,13 @@ export default function MenuSign({image, delay, name, handleClick,handleonMouseO
                     
             
             <motion.div 
-                className={`${name}-sign-container`} 
+                className={styles[`${name}SignContainer`]} 
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale:1.1 }}
                 
             >
                 <motion.img // img opcion del menu
-                    className={`${name}-sign`}
+                    className={styles[`${name}Sign`]}
                     src={image}
                     alt={`${name}-sign`}
                     initial={{x:xInitial, y:yInitial}}

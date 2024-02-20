@@ -1,4 +1,4 @@
-import "../styleSheets/Rules.css"
+import styles from "../styleSheets/Rules.module.scss"
 import buttonCloseUP from "../sources/buttonCloseUp.png"
 import buttonCloseDown from "../sources/buttonCloseDown.png"
 import hachuela from "../sources/hachuela1.png"
@@ -15,7 +15,7 @@ export default function Rules({filterOn, rulesContentOn}){
 
     return(
         <motion.div 
-            className="rules"
+            className={styles.rules}
             initial={{x:-500, y:200, scale:0}}
             animate={{x:0, y:0, scale:1}}            
             transition={{type:"spring", duration:1}}
@@ -24,7 +24,7 @@ export default function Rules({filterOn, rulesContentOn}){
 
 
             <motion.img    
-                className="close-button"
+                className={styles.closeButton}
                 src={crossIcon ? buttonCloseUP: buttonCloseDown}
                 alt="button close"
                 onClick={()=>{filterOn(false);
@@ -39,13 +39,24 @@ export default function Rules({filterOn, rulesContentOn}){
             />
             
             
-            <p className="rules-text">
-                Nuestro slime es muy gloton y debemos alimentarlo encontrando todos sus alimentos favoritos. <br/> <br/>
+            <p className={styles.rulesText}>
+                Nuestro slime es muy glotón y debemos alimentarlo encontrando sus alimentos favoritos. <br/> <br/>
                 Contamos con fichas las que tendremos que dar vuelta hasta encontrar todos los pares, pero cuidado, cada vez que  
-                no encontremos alimentos iguales el slime recibira daño. <br/> <br/>
-                Ademas de los alimentos dentro de las fichas hay algunos objetos especiales que aparecen 4 veces y  tienen efectos negativos. <br/> <br/>
-                    <img src={licuadora} alt="licuadora"/> Licuadora : Al encontrar uno, siempre queda visible y al encontrar los 4 mezclara todas las fichas. <br/><br/>
-                    <img src={hachuela} alt="hachuela"/> Hachuela : Al encontrar 2 el slime recibira daño. <br/><br/>
+                no encontremos alimentos iguales el slime recibirá daño. <br/> <br/>
+                Además de los alimentos, dentro de las fichas hay algunos objetos especiales que aparecen 4 veces y  tienen efectos negativos. <br/> <br/>
+                <div className={styles.especialText}>
+                    <img src={licuadora} alt="licuadora"/> 
+                    <p> Licuadora: Al encontrar uno, siempre queda visible y al encontrar los 4 mezclará todas las fichas.</p>  
+                    
+                </div>
+                <br/>
+                <div className={styles.especialText}>
+                    <img src={hachuela} alt="hachuela"/> 
+                    <p> Hachuela: Al encontrar 2 el slime recibirá daño.</p> 
+                    
+                </div>
+                
+                    
                 
             </p>
         </motion.div>

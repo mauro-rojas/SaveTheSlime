@@ -1,4 +1,4 @@
-import "../styleSheets/Slime.css"
+import styles from "../styleSheets/Slime.module.scss"
 import slimeHighHp from "../sources/Slime/slimeFullhp.gif"
 import slimeIdle from "../sources/Slime/slimeIdle.gif"
 import slimeDmg from "../sources/Slime/slimeDmg.gif"
@@ -13,7 +13,7 @@ export default function Slime({ hpValue , win}){
 
     return(
         <motion.div
-            className="slime-container"
+            className={styles.slimeContainer}
             initial={{x:-700}}
             animate={{x:0}}
             transition={{
@@ -24,7 +24,7 @@ export default function Slime({ hpValue , win}){
             }}
         >
             <img
-                className="slime"
+                className={styles.slime}
                 src={
                     (win) ?
                         slimeWin

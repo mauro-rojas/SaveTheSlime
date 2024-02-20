@@ -1,5 +1,5 @@
 import background from "../sources/background.gif";
-import "../styleSheets/Background.css";
+import styles from "../styleSheets/Background.module.scss";
 import { motion } from "framer-motion"
 
 export default function Background(){
@@ -8,7 +8,7 @@ export default function Background(){
 
     return(
         <motion.div
-            className="background-container"
+            className={styles.backgroundContainer}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0,0.4, 0.6,0.9, 1] }}
             transition ={{duration:3}}

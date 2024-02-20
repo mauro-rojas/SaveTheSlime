@@ -2,7 +2,7 @@ import nameSign from "../sources/nameSign1.png";
 import slimeText from "../sources/slimeText.gif";
 import savior from "../sources/savior.gif";
 
-import "../styleSheets/GameNameSign.css";  
+import styles from"../styleSheets/GameNameSign.module.scss";  
 import { animate, delay, motion } from "framer-motion";
 
 
@@ -13,14 +13,14 @@ export default function NameSign(){
 
     return(   
         <div             
-            className="nameSign-container"    
+            className={styles.nameSignContainer}   
         >
             
             <div
-                className="gameName-container"
+                className={styles.gameNameContainer}
             >
                 <motion.img
-                    className="slimeText"
+                    className={styles.slimeText}
                     src={slimeText}
                     alt="slimeText"
                     animate={{ y:[-310, 0,-10 ,0]  }}
@@ -28,7 +28,7 @@ export default function NameSign(){
                 />
 
                 <motion.img
-                    className="savior"
+                    className={styles.savior}
                     src={savior}
                     alt="savior"
                     animate={{ y:[-310, 0,-10 ,0]  }}
@@ -38,7 +38,7 @@ export default function NameSign(){
                 
             </div>
             <motion.img
-                className="sign"
+                className={styles.sign}
                 src={nameSign}
                 alt="name-sign"
                 animate={{ y:[-310, 0,-10 ,0]  }}

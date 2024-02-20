@@ -1,4 +1,4 @@
-.hpBar-container{
+.hpBarContainer{
     position: relative;
     z-index: 9;
     height: 20vh;
@@ -18,7 +18,7 @@
 
 
 
-.health-container{
+.healthContainer{
     position: absolute;
     height: 3.3vw;    
     width: 24.3vw;
@@ -64,7 +64,7 @@
     
 }
 
-.health-shadow{
+.healthShadow{
     position: absolute;
     z-index: 11;
     height: 3.3vw;
@@ -78,7 +78,7 @@
 
 
 @media (width < 800px) {
-    .hpBar-container{
+    .hpBarContainer{
         /* position: fixed;
         padding-top: 32vh;
         padding-left: 50vw; */
@@ -92,14 +92,14 @@
         max-width: 377px;
     }
 
-    .health-container{
+    .healthContainer{
         height: 7.3vw;
         width: 53vw;
         max-width: 306px;
         max-height: 44px;
     }
 
-    .fullHp, .health-shadow, .halfHp, .lowHp {
+    .fullHp, .healthShadow, .halfHp, .lowHp {
         height: 7.3vw;
         width: 53vw;
         max-height: 44px;
