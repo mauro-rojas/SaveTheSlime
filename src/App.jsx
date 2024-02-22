@@ -1,16 +1,16 @@
 
 import "./styleSheets/App.module.scss";
 
-import Background from "./components/Background"
-import GameNameSign from "./components/GameNameSign";
-import StartSign from "./components/MenuSign";
-import RulesSign from "./components/MenuSign";
-import PlayAgainSign from "./components/MenuSign";
-import Rules from "./components/Rules";
-import Filter from "./components/Filter"
-import MemoGame from "./components/MemoGame";
-import HpBar from "./components/HpBar";
-import Slime from "./components/Slime";
+import Background from "./components/Background.jsx"
+import GameNameSign from "./components/GameNameSign.jsx";
+import StartSign from "./components/MenuSign.jsx";
+import RulesSign from "./components/MenuSign.jsx";
+import PlayAgainSign from "./components/MenuSign.jsx";
+import Rules from "./components/Rules.jsx";
+import Filter from "./components/Filter.jsx"
+import MemoGame from "./components/MemoGame.jsx";
+import HpBar from "./components/HpBar.jsx";
+import Slime from "./components/Slime.jsx";
 
 import startImage from "./sources/start.png"
 import rulesImage from "./sources/rules.png"
