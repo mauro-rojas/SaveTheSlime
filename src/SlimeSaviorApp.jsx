@@ -1,5 +1,5 @@
 
-import "./styleSheets/App.module.scss";
+import styles from "./styleSheets/App.module.scss";
 
 import Background from "./components/Background.jsx"
 import GameNameSign from "./components/GameNameSign.jsx";
@@ -24,7 +24,7 @@ import {motion} from "framer-motion"
 
 
 
-function App() {
+function SlimeSaviorApp() {
   
 
   
@@ -81,7 +81,7 @@ function App() {
 
 
   return (    
-    <div className="app-container">
+    <div className={styles.appContainer}>
       
       <Background/>
       {/* {filterOn ?
@@ -97,7 +97,7 @@ function App() {
           <GameNameSign/>
           <StartSign
             image = {startImage}
-            delay = {6}
+            delay = {3}
             name = "start"
             handleClick={()=>{functionstart()}}
             handleonMouseOver={true}
@@ -107,7 +107,7 @@ function App() {
           />
           <RulesSign
             image = {rulesImage}
-            delay = {6.5}
+            delay = {3.5}
             name = "rules"
             handleClick = {()=>{setRulesPressed(!rulesPressed);
                                 setFilterOn(true);
@@ -171,4 +171,4 @@ function App() {
               
       
 
-export default App;
+export default SlimeSaviorApp;

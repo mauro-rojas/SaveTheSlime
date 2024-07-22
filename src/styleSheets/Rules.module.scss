@@ -7,7 +7,7 @@
     z-index: 5;
     position:fixed;
     top: 0;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     display: flex;    
     align-content: center;
@@ -65,6 +65,11 @@
 .especialText{
     display: flex;
     align-items: center;
+    
+}
+
+.especialText p{
+    text-wrap: balance;
 }
 
 .especialText img {

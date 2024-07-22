@@ -11,12 +11,15 @@ html,body{
     overflow: hidden;
 }
 
-.app-container{
-    height: 100vh;
+.appContainer{
+    height: 100dvh;
     width: 100vw;
     background-color: rgb(18, 11, 27);
-    overflow: hidden;
     position: relative;
+    cursor:url("../sources/cursor1.png"), auto;
+    overflow: hidden;
+    
+    
 }
 
 

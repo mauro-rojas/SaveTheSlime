@@ -20,7 +20,7 @@ export default function Slime({ hpValue , win}){
                 type: "spring",
                 bounce: 0.1,
                 duration: 0.9,
-                delay:2.8
+                delay:1.5
             }}
         >
             <img

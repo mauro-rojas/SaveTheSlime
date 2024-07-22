@@ -31,12 +31,17 @@ const HACHUELAS = [
 const FICHAS = FOODS.concat(LICUADORAS.concat(HACHUELAS)).sort(() => Math.random() - 0.5);
 
 let fichasAnimaciones ={
-    hidden :{opacity:0, x:-200},
-    visible:{opacity:1, x:0},
+    hidden :{opacity:0, x:-200, y: -200},
+    visible:{opacity:1, x:0, y:0},
     mixed:{
+        opacity:1,
+        x:0,
+        y:0,
         rotate: [0, 1080],
     }
 }
+
+
 
 
 
@@ -96,7 +101,8 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
             if((guessed.filter((element)=>(element.split("|")[1] !== licuadora && element.split("|")[1] !== hachuela) ).length) === FOODS.length){
                 setTimeout(() => {
                     setWin(true);
-                    setEndGame(true)
+                    setEndGame(true);
+                    FICHAS.sort(() => Math.random() - 0.5);  //mezclo para un nuevo juego
                 }, 1000);
             } 
         }
@@ -106,7 +112,10 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
     //derrota
     useEffect(()=>{
         if(actualHp === 0){
-            setTimeout(() => setEndGame(true), 1000);
+            setTimeout(() =>{
+                 setEndGame(true);
+                 FICHAS.sort(() => Math.random() - 0.5);  //mezclo para un nuevo juego
+            }, 1000);
         }                    
    }, [actualHp]);
 
@@ -114,19 +123,9 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
     return(
         <motion.ul 
             className={styles.fichasContainer}
-            initial="hidden"
-            animate="visible"
-            variants={fichasAnimaciones}
-            transition= {{
-                type: "spring",
-                bounce: 0,
-                duration: 0.15,
-                delayChildren: 0.3,
-                staggerChildren: 0.05}
-            }
         >
             {
-                FICHAS.map((ficha) => {
+                FICHAS.map((ficha, i) => {
                     const [,url] = ficha.split("|"); 
                     console.log(url);
                     return(
@@ -135,8 +134,14 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
                             className={styles.ficha}
                             whileTap={{scale:0.9}}
                             whileHover={{scale:1.1}}
+                            initial="hidden"
                             animate={`${mixed ? "mixed" : "visible" }`}
-                            transition={{easeInOut, duration: 1.5}}
+                            transition= {{
+                                type: "spring",
+                                bounce: 0.2,
+                                duration: 0.5,
+                                delay: i*0.1
+                            }}
                             variants={fichasAnimaciones}
                             onClick = {()=> {if((selected.length<2)&&(!selected.includes(ficha))&&(!guessed.includes(ficha)))
                                 setSelected((selected)=>selected.concat(ficha))

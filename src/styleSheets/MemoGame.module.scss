@@ -41,7 +41,10 @@
     background-color: rgba(138, 57, 192, 0.637);
     border-radius: 8px;
     border: 1px solid rgb(173, 173, 173);
+    cursor: url("../sources/cursor2.png"), auto;
 }
+
+
 
 @media (max-width: 800px) {
 
@@ -73,11 +76,18 @@
     
 }
 
-@media (width > 1280px) {
+@media (width > 1200px) {
 
     .ficha, .fichaReverso{
-        width: 6vw;  
-              
+        width: 7vw;
+        height: 14vh;  
+             
+    }
+
+    .fichasContainer{
+        margin-bottom: 100px;
+        gap: 13px;
+        padding-top: 9vh;
     }
 
 }

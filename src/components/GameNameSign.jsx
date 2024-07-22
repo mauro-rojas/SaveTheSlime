@@ -24,7 +24,7 @@ export default function NameSign(){
                     src={slimeText}
                     alt="slimeText"
                     animate={{ y:[-310, 0,-10 ,0]  }}
-                    transition={{ delay:3, duration: 3.5 }}
+                    transition={{ delay:1.6, duration: 2.8 }}
                 />
 
                 <motion.img
@@ -32,7 +32,7 @@ export default function NameSign(){
                     src={savior}
                     alt="savior"
                     animate={{ y:[-310, 0,-10 ,0]  }}
-                    transition={{ delay:3, duration: 3.5 }}
+                    transition={{ delay:1.4, duration: 2.8 }}
                 />
                 
                 
@@ -42,7 +42,7 @@ export default function NameSign(){
                 src={nameSign}
                 alt="name-sign"
                 animate={{ y:[-310, 0,-10 ,0]  }}
-                transition={{ delay:3, duration: 3.5 }}
+                transition={{ delay:1.2, duration: 2.8 }}
             />
             
 

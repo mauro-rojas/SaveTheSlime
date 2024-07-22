@@ -31,8 +31,8 @@ export default function HpBar({ hpValue }){
             transition={{
                 type: "spring",
                 bounce: 0.2,
-                delay:1.5,
-                duration: 1,
+                delay:0.5,
+                duration: 1.3,
                 
             }}
         >
@@ -43,7 +43,7 @@ export default function HpBar({ hpValue }){
                 alt="hp-bar"
                 initial={{scale:0.5}}
                 animate={{scale:1}}
-                transition={{delay:2.5,duration:1}}
+                transition={{delay:1.2 ,duration:1.3}}
             />
             
 
@@ -51,7 +51,7 @@ export default function HpBar({ hpValue }){
                 className={styles.healthContainer}
                 initial={{scale:0.5 }}
                 animate={{scale:1}}
-                transition={{delay:2.5,duration:1}}
+                transition={{delay:1.2 ,duration:1.3}}
             >
                 <div
                     className={
