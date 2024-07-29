@@ -77,6 +77,12 @@
 
     .fichaReverso{
         padding: 1vw 2vw 1vw 2vw;
+        img{
+            cursor: url("../sources/cursor2.png"), auto;
+            height: auto;
+            width: 12dvw;
+            max-width: 95%;
+        }
     }
 
     .fichaImagen{
